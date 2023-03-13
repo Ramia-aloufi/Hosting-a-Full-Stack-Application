@@ -56,9 +56,6 @@ workflows:
   udagram:
     jobs:
       - build
-      - hold:
-          requires:
-            - build
       - deploy:
           requires:
             - hold
