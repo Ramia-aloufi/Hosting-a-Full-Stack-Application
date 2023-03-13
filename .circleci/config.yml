@@ -9,11 +9,10 @@ jobs:
   build:
     docker:
       # the base image can run most needed actions with orbs
-      - image: "cimg/node:16.0.0"
+      - image: "cimg/node:14.0"
     steps:
       # install node and checkout code
-      - node/install:
-                  
+      - node/install 
       - checkout 
       # Use root level package.json to install dependencies in the frontend app
       - run:
