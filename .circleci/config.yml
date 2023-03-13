@@ -6,14 +6,16 @@ orbs:
   aws-cli: circleci/aws-cli@3.1.1
   # different jobs are calles later in the workflows sections
 jobs:
-  build:
+  deploy:
     docker:
-      # the base image can run most needed actions with orbs
-      - image: "cimg/node:14.15"
-          steps:
-      - node/install
-      - checkout
+      - image: "cimg/base:stable"
+      # more setup needed for aws, node, elastic beanstalk
+    steps:
+      - node/install:
+          node-version: '14.15' 
+      - eb/setup
       - aws-cli/setup
+      - checkout
       
       # Use root level package.json to install dependencies in the frontend app
       - run:
