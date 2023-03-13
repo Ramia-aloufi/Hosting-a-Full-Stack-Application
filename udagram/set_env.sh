@@ -9,6 +9,6 @@ export AWS_REGION=us-east-1
 export AWS_PROFILE=default
 export PORT=8080
 export JWT_SECRET=ram-coding
-export URL=http://udagram-api-dev3.us-east-1.elasticbeanstalk.com
+export URL=http://udagram-dev-env.eba-k24uhux4.us-east-1.elasticbeanstalk.com
 
 
