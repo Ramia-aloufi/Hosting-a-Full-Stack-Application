@@ -35,6 +35,11 @@ jobs:
           name: API Build
           command: |
             npm run api:build
+      # TODO: Deploy the backend API      
+      - run:
+          name: API Build
+          command: |
+            npm run api:deploy
 
   # deploy step will run only after manual approval
   deploy:
