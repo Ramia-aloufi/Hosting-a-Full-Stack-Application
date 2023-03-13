@@ -50,10 +50,11 @@ import { config } from "bluebird";
   app.get("/", async (req, res) => {
     res.send("/api/v0/");
   });
+  app.set('port', (process.env.PORT || 8080));
 
   // Start the Server
-  app.listen(process.env.port, () => {
-    console.log(`Backend server is listening on port ${process.env.port}....`);
+  app.listen(app.get('port'), () => {
+    console.log(`Backend server is listening on port ${app.get('port')}....`);
     console.log(`Frontent server running ${process.env.URL}`);
     console.log(`press CTRL+C to stop server`);
   });

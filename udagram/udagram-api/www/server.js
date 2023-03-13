@@ -77,9 +77,10 @@ const model_index_1 = require("./controllers/v0/model.index");
     app.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         res.send("/api/v0/");
     }));
+    app.set('port', (process.env.PORT || 8080));
     // Start the Server
-    app.listen(process.env.port, () => {
-        console.log(`Backend server is listening on port ${process.env.port}....`);
+    app.listen(app.get('port'), () => {
+        console.log(`Backend server is listening on port ${app.get('port')}....`);
         console.log(`Frontent server running ${process.env.URL}`);
         console.log(`press CTRL+C to stop server`);
     });
