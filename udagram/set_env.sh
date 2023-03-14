@@ -2,13 +2,15 @@
 # DO NOT STORE YOUR CREDENTIALS INTO GIT
 export POSTGRES_USERNAME=postgres
 export POSTGRES_PASSWORD=aabb1122
-export POSTGRES_HOST=database-1.c7box8og2i2v.us-east-1.rds.amazonaws.com
+export POSTGRES_HOST=database-1.cnqfptarnj0j.us-east-1.rds.amazonaws.com
 export POSTGRES_DB=postgres
 export AWS_BUCKET=arn:aws:s3:::udagarm
 export AWS_REGION=us-east-1
 export AWS_PROFILE=default
 export PORT=8080
 export JWT_SECRET=ram-coding
-export URL=http://udagram-dev-env.eba-k24uhux4.us-east-1.elasticbeanstalk.com
+export URL=http://udagram-env.eba-7wfqbrzh.us-east-1.elasticbeanstalk.com
+export AWS_ACCESS_KEY=AKIAYG6U72UN6XJ5C62X
+export AWS_SECRET_ACCESS_KEY=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
 
 

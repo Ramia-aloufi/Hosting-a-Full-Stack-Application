@@ -44,7 +44,7 @@ RDS - POSTGRES_DB: postgres
 
 S3 - Frontend: http://udagarm.s3-website-us-east-1.amazonaws.com/home
 
-EB - Backend: http://udagram-api-dev3.us-east-1.elasticbeanstalk.com/
+EB - Backend: http://udagram-dev-env.eba-k24uhux4.us-east-1.elasticbeanstalk.com
 
 ## Circle ci pipline
 
