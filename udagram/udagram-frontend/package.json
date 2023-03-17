@@ -7,11 +7,12 @@
     "ng": "ng",
     "start": " export NODE_OPTIONS=--openssl-legacy-provider; ng serve",
     "build": " export NODE_OPTIONS=--openssl-legacy-provider; ng build",
-    "deploy": "aws s3 cp --recursive  ./www s3://udagarm/",
+    "deploy": "aws s3 cp --recursive  ./www s3://udacity-udagram-s3-01/",
     "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  
   "private": true,
   "dependencies": {
     "@angular/common": "^8.2.14",

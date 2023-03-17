@@ -36,7 +36,7 @@
 
 ## AWS  Setup
 
-RDS - POSTGRES_HOST: database-1.c7box8og2i2v.us-east-1.rds.amazonaws.com
+RDS - POSTGRES_HOST: database-1.cyh39jw0miao.us-east-1.rds.amazonaws.com
 
 RDS - POSTGRES_PORT: 5432
 
@@ -44,7 +44,7 @@ RDS - POSTGRES_DB: postgres
 
 S3 - Frontend: http://udagarm.s3-website-us-east-1.amazonaws.com/home
 
-EB - Backend: http://udagram-dev-env.eba-k24uhux4.us-east-1.elasticbeanstalk.com
+EB - Backend: http://udacityudagrameb01-env.eba-hkarsm9v.us-east-1.elasticbeanstalk.com
 
 ## Circle ci pipline
 
