@@ -1,12 +1,12 @@
 branch-defaults:
   default:
-    environment: Udagram-dev-env
+    environment: udacityudagrameb01-env
 environment-defaults:
   udagram-api-dev:
     branch: null
     repository: null
 global:
-  application_name: udagram-dev
+  application_name: udacity-udagram-eb-01
   artifact: ./www/Archive.zip
   default_ec2_keyname: aws-eb
   default_platform: Node.js 16 running on 64bit Amazon Linux 2
