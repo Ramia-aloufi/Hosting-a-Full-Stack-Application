@@ -14,5 +14,9 @@ router.get('/:id', async (req: Request, res: Response) => {
   const item = await User.findByPk(id);
   res.send(item);
 });
+// router.get('/', async (req: Request, res: Response) => {
+//   const item = "users"
+//   res.send(item);
+// });
 
 export const UserRouter: Router = router;

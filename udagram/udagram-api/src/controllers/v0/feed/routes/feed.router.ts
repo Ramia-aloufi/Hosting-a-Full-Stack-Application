@@ -4,6 +4,7 @@ import {NextFunction} from 'connect';
 import * as jwt from 'jsonwebtoken';
 import * as AWS from '../../../../aws';
 import * as c from '../../../../config/config';
+import { Error } from 'aws-sdk/clients/servicecatalog';
 
 const router: Router = Router();
 
@@ -29,12 +30,17 @@ export function requireAuth(req: Request, res: Response, next: NextFunction) {
 // Get all feed items
 router.get('/', async (req: Request, res: Response) => {
   const items = await FeedItem.findAndCountAll({order: [['id', 'DESC']]});
-  items.rows.map((item) => {
-    if (item.url) {
-      item.url = AWS.getGetSignedUrl(item.url);
-    }
-  });
-  res.send(items);
+  try{
+    items.rows.map((item) => {
+      if (item.url) {
+        item.url = AWS.getGetSignedUrl(item.url);
+      }
+    });
+    res.send(items);
+  }catch(e){
+res.send(e)
+  }
+
 });
 
 // Get a feed resource
@@ -76,7 +82,9 @@ router.post('/',
       });
 
       const savedItem = await item.save();
-
+if(!savedItem){
+  return res.status(400).send({message: 'Failure savedItem'});
+}
       savedItem.url = AWS.getGetSignedUrl(savedItem.url);
       res.status(201).send(savedItem);
     });
